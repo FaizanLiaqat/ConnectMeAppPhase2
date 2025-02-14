@@ -1,6 +1,9 @@
 package com.example.connectmeapp
 
+import android.app.ActivityOptions
+import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +18,17 @@ class SecondScreen : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val registerText = findViewById<TextView>(R.id.register)
+        registerText.setOnClickListener {
+            val intent = Intent(this@SecondScreen, ThirdScreen::class.java)
+            val options = ActivityOptions.makeCustomAnimation(
+                this, R.anim.slide_in_right, R.anim.slide_out_left
+            )
+
+            startActivity(intent, options.toBundle())
+            finish()
         }
     }
 }

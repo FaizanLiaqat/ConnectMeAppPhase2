@@ -10,4 +10,17 @@
 
     <string name="or_continue_with">or continue with</string>
     <string name="register"> Register</string>
+    <string name="great">Great!</string>
+    <string name="register_msg">We\'re so excited to get you onboard!</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="register_icon_desc">Register Screen Icon</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="terms_privacy">By clicking Agree and continue below, I agree to</string>
+    <string name="terms_of_service"><u>Terms of Service</u></string>
+    <string name="and">and</string>
+    <string name="privacy_policy"><u>Privacy Policy</u></string>
+    <string name="already_have_an_account">Already have an account?</string>
+
 </resources>

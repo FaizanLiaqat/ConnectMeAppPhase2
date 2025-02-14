@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:text="@string/Welcome"
+            android:text="@string/great"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -44,9 +44,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:text="@string/login_message"
+            android:text="@string/register_msg"
             android:textColor="@color/black"
             android:textSize="21sp" />
+
+        <!--Name-->
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/dark_brown"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp" />
 
         <!-- Username -->
         <EditText
@@ -57,6 +71,34 @@
             android:background="@android:color/transparent"
             android:hint="@string/username"
             android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/dark_brown"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp" />
+
+        <!-- Phone Number -->
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:textColor="@color/dark_brown"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp" />
+
+        <!-- Phone Number -->
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
             android:padding="12dp"
             android:textColor="@color/dark_brown"
             android:textColorHint="@color/gray"
@@ -76,17 +118,54 @@
             android:textColorHint="@color/gray"
             android:textSize="16sp" />
 
-        <!-- Forgot Password -->
+<!--        Terms and Policy-->
         <TextView
-            android:id="@+id/forgot_password"
+            android:id="@+id/before_Tos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:text="@string/forgot_password"
-            android:textColor="@color/brown"
+            android:text="@string/terms_privacy"
+            android:textColor="@color/black"
             android:textSize="14sp"
             />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+
+            <TextView
+                android:id="@+id/tos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="@string/terms_of_service"
+                android:textColor="@color/dark_brown"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/and"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="@string/and"
+                android:layout_toEndOf="@+id/tos"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_toEndOf="@+id/and"
+                android:text="@string/privacy_policy"
+                android:textColor="@color/dark_brown"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+        </RelativeLayout>
         <!-- Login Button -->
         <Button
             android:id="@+id/login_button"
@@ -94,108 +173,13 @@
             android:layout_height="50dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/login_bg_shp"
-            android:text="@string/login"
+            android:text="@string/register"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             app:backgroundTint="@null" />
 
 
-        <!-- Divider Line with "or continue with" -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"
-            android:orientation="horizontal">
 
-            <View
-                android:layout_width="100dp"
-                android:layout_height="1dp"
-                android:background="@color/black" />
-
-            <TextView
-                android:id="@+id/or_continue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="10dp"
-                android:text="@string/or_continue_with"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-            <View
-                android:layout_width="100dp"
-                android:layout_height="1dp"
-                android:background="@color/black" />
-        </LinearLayout>
-
-        <!-- Social Buttons (Centered) -->
-        <!-- Social Buttons (Centered) -->
-        <LinearLayout
-            android:id="@+id/social_buttons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="40dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-
-            <FrameLayout
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical">
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/circle_bg" />
-
-                <ImageView
-                    android:id="@+id/google_login"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/google_icon" />
-            </FrameLayout>
-
-<!--                add space between google icon and apple icon-->
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"/>
-
-
-            <ImageView
-                android:id="@+id/apple_login"
-                android:layout_gravity="center"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="8dp"
-                android:src="@drawable/apple_icon"/>
-
-            <!--add space between facebook icon and apple icon-->
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"/>
-
-            <!-- Facebook Icon at the End of Parent -->
-            <FrameLayout
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_gravity="end">
-
-                <ImageView
-                    android:id="@+id/facebook_login"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_gravity="center_vertical"
-                    android:padding="6dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/facebook_icon"/>
-            </FrameLayout>
-        </LinearLayout>
 
 
         <RelativeLayout
@@ -208,18 +192,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="60dp"
-                android:text="@string/don_t_have_an_account"
-                android:textColor="@color/dark_brown"
+                android:text="@string/already_have_an_account"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 />
+
             <TextView
-                android:id="@+id/register"
+                android:id="@+id/already_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="20dp"
                 android:layout_toEndOf="@+id/register_text"
-                android:text="@string/register"
-                android:layout_marginStart="5dp"
+                android:text="@string/login"
                 android:textColor="@color/dark_brown"
                 android:textSize="17sp"
                 android:textStyle="bold" />
