@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="12dp">
+
+    <!-- ✅ Layer 1: Top Bar (Search Bar) -->
+    <RelativeLayout
+        android:id="@+id/layer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@color/white">
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/search_background"
+            android:hint="@string/search"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingStart="50dp"
+            android:paddingEnd="16dp"
+            android:drawablePadding="10dp"
+            android:singleLine="true"
+            android:inputType="text"
+            android:gravity="center_vertical" />
+
+        <!-- 🔍 Search Icon (Far Right) -->
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_search_inactive"
+            app:tint="@color/gray" />
+    </RelativeLayout>
+
+    <!-- 📌 "Recent Searches" Heading -->
+    <TextView
+        android:id="@+id/recent_searches_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recent_searches"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingTop="12dp"
+        android:paddingBottom="6dp"
+        android:visibility="gone"/>
+
+    <!-- 🔎 Recent Searches RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</LinearLayout>

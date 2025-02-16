@@ -46,7 +46,8 @@
             android:layout_marginBottom="15dp"
             android:text="@string/register_msg"
             android:textColor="@color/black"
-            android:textSize="21sp" />
+            android:fontFamily="sans-serif-medium"
+            android:textSize="20sp" />
 
         <!--Name-->
         <EditText

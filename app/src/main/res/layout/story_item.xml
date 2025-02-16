@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginEnd="12dp">
+
+    <!-- Profile Picture Border -->
+    <FrameLayout
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <!-- Outer Circle (Story Border) -->
+        <ImageView
+            android:id="@+id/story_border"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/story_border"/>
+
+        <!-- Profile Picture (Clipped Inside Border) -->
+        <ImageView
+            android:id="@+id/story_image"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_mask"/>
+
+        <FrameLayout
+            android:id="@+id/plus_icon_container"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/plus_circle_bg"
+            android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/plus_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="1dp"
+            android:layout_marginEnd="1dp"
+            android:src="@drawable/plus_nav_icon"
+            android:visibility="gone"/>
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

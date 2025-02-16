@@ -39,6 +39,8 @@
             android:textStyle="bold" />
 
         <!-- Subtitle -->
+
+        <!-- Username -->
         <TextView
             android:id="@+id/subtitle"
             android:layout_width="wrap_content"
@@ -46,9 +48,9 @@
             android:layout_marginBottom="15dp"
             android:text="@string/login_message"
             android:textColor="@color/black"
-            android:textSize="21sp" />
+            android:fontFamily="sans-serif-medium"
+            android:textSize="20sp" />
 
-        <!-- Username -->
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
@@ -88,6 +90,9 @@
             />
 
         <!-- Login Button -->
+
+
+        <!-- Divider Line with "or continue with" -->
         <Button
             android:id="@+id/login_button"
             android:layout_width="match_parent"
@@ -99,8 +104,6 @@
             android:textSize="18sp"
             app:backgroundTint="@null" />
 
-
-        <!-- Divider Line with "or continue with" -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

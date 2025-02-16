@@ -4,9 +4,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="milky_white">#FAF3E0</color>
     <color name="greenish_brown">#6A5D4D</color>
-    <color name="dark_brown">#654321</color>
+    <color name="dark_brown_v0">#654321</color>
+    <color name="dark_brown">#543619</color>
     <color name="gray">#A9A9A9</color>
     <color name="brown">#7D5A50</color>
     <color name="dark_gray">#757575</color>
     <color name="light_gray">#D3D3D3</color>
+    <color name="story_active">#FF5722</color>
+    <color name="bottom_nav_color">#000000</color>
 </resources>
