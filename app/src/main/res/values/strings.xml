@@ -39,5 +39,9 @@
     <string name="no_requests_yet">No Requests Yet</string>
     <string name="search_for_users">Search for users</string>
     <string name="new_message">New Message</string>
+    <string name="hello">Hello!</string>
+    <string name="_12_30_pm">12:30 PM</string>
+    <string name="view_profile">View Profile</string>
+    <string name="typing">Typing...</string>
 
 </resources>

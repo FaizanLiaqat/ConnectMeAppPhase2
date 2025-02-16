@@ -5,15 +5,40 @@
     android:orientation="vertical"
     android:padding="10dp">
 
-    <!-- 🔍 Search Bar -->
-    <EditText
-        android:id="@+id/search_dm"
+    <!-- 🔍 Search Bar with Icon -->
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:hint="@string/search_dms"
         android:background="@drawable/search_background"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"/>
+        android:padding="5dp">
+
+        <!-- Search Input -->
+        <EditText
+            android:id="@+id/search_dm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="@color/dark_gray"
+            android:hint="@string/search_dms"
+            android:paddingStart="10dp"
+            android:paddingEnd="40dp"
+        android:background="@android:color/transparent"/>
+
+        <!-- 🔍 Search Icon -->
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="44dp"
+                android:layout_height="34dp"
+               android:layout_gravity="center"
+                android:src="@drawable/search_icon"
+                android:padding="8dp"/>
+        </FrameLayout>
+
+    </RelativeLayout>
 
     <!-- 🔹 RecyclerView for List of Chats -->
     <androidx.recyclerview.widget.RecyclerView
@@ -21,3 +46,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>
+

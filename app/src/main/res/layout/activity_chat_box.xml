@@ -1,40 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/white">
 
-    <!-- 🔙 Back Button -->
-    <ImageView
-        android:id="@+id/back_icon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/back_button_logo"
-        android:layout_alignParentStart="true"/>
+    <!-- 🔹 Top Layer: Back Button, Username, Video & Call Icons -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:padding="12dp"
+        android:background="@color/white">
 
-    <!-- 👤 Profile Image -->
-    <ImageView
-        android:id="@+id/chat_profile_image"
-        android:src="@drawable/profile_placeholder"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:scaleType="centerCrop"
-        android:layout_toEndOf="@id/back_icon"
-        android:layout_marginStart="12dp"
-        android:background="@drawable/circle_mask"/>
+        <!-- 🔙 Back Button -->
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back_button_logo"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
 
-    <!-- 📝 Username -->
-    <TextView
-        android:id="@+id/chat_username"
-        android:layout_width="wrap_content"
+        <!-- 👤 Username -->
+        <TextView
+            android:id="@+id/chat_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/back_icon"
+
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <!-- 📞 Phone Call Icon -->
+        <ImageView
+            android:id="@+id/phone_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/phone_call"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="50dp"/>
+
+        <!-- 🎥 Video Call Icon -->
+        <ImageView
+            android:id="@+id/video_call_icon"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/video_call_icon__2_"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <!-- 🔹 User Info Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_toEndOf="@id/chat_profile_image"
-        android:layout_marginStart="10dp"
-        android:layout_centerVertical="true"/>
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</RelativeLayout>
+        <!-- 🟠 Profile Picture -->
+        <ImageView
+            android:id="@+id/chat_profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_placeholder"
+            android:background="@drawable/circle_mask"/>
+
+        <!-- 🔹 "View Profile" Button -->
+        <TextView
+            android:id="@+id/view_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_profile"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:background="@drawable/profile_button_bg"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- 🔹 Chat Messages RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"/>
+
+    <!-- 🔹 Message Input Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="10dp"
+        android:background="@color/white">
+
+        <!-- ✏️ Typing Box -->
+        <EditText
+            android:id="@+id/message_input"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/typing"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:background="@drawable/message_input_bg"
+            android:padding="15dp"
+            android:layout_alignParentStart="true"
+           />
+
+        <!-- ➡️ Send Icon -->
+        <ImageView
+            android:id="@+id/send_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/send_message_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"/>
+    </RelativeLayout>
+</LinearLayout>

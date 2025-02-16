@@ -12,4 +12,7 @@
     <color name="light_gray">#D3D3D3</color>
     <color name="story_active">#FF5722</color>
     <color name="bottom_nav_color">#000000</color>
+    <color name="milkish_white">#F5F5DC</color>  <!-- Slightly darker than white -->
+    <color name="slightly_darker_milkish_white">#E8E8D0</color>  <!-- For sent messages -->
+
 </resources>
