@@ -52,5 +52,6 @@
     <string name="_5">5</string>
     <string name="this_is_my_bio">This is my bio...</string>
     <string name="my_profile">My Profile</string>
+    <string name="search_following">Search Following</string>
 
 </resources>

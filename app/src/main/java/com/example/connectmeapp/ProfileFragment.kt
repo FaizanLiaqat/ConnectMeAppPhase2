@@ -43,10 +43,20 @@ class ProfileFragment : Fragment() {
         bio.text = "🌍 Traveler | 📸 Photographer | 📖 Blogger"
         profileImage.setImageResource(R.drawable.profile_placeholder)
 
-        // 🔹 Dummy Stats (Updated with random numbers)
-        postsCount.text = "58"  // Example: 58 posts
-        followersCount.text = "4.5K"  // Example: 4,500 followers
-        followingCount.text = "328"  // Example: Following 328 people
+        // 🔹 Dummy Stats
+        postsCount.text = "58"
+        followersCount.text = "4.5K"
+        followingCount.text = "328"
+
+        // ✅ Handle Click on Followers
+        followersCount.setOnClickListener {
+            openFollowActivity("Followers", username.text.toString())
+        }
+
+        // ✅ Handle Click on Following
+        followingCount.setOnClickListener {
+            openFollowActivity("Following", username.text.toString())
+        }
 
         // 🔹 Setup RecyclerView for Posts
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
@@ -61,22 +71,20 @@ class ProfileFragment : Fragment() {
         return view
     }
 
-    // ✅ Dummy posts data (More than 25 posts for testing)
+    // ✅ Opens FollowActivity with correct tab
+    private fun openFollowActivity(tabType: String, userName: String) {
+        val intent = Intent(requireContext(), FollowActivity::class.java)
+        intent.putExtra("tabType", tabType)  // Pass "Followers" or "Following"
+        intent.putExtra("username", userName)  // Send username
+        startActivity(intent)
+    }
+
+    // ✅ Dummy posts data
     private fun getSamplePosts(): List<Int> {
-        return listOf(
-            R.drawable.profile_placeholder, R.drawable.profile_placeholder, R.drawable.profile_placeholder,
-            R.drawable.profile_placeholder, R.drawable.profile_placeholder, R.drawable.profile_placeholder,
-            R.drawable.profile_placeholder, R.drawable.profile_placeholder, R.drawable.profile_placeholder,
-            R.drawable.profile_placeholder, R.drawable.profile_placeholder, R.drawable.profile_placeholder,
-            R.drawable.profile_placeholder, R.drawable.profile_placeholder, R.drawable.profile_placeholder,
-            R.drawable.profile_placeholder, R.drawable.profile_placeholder, R.drawable.profile_placeholder,
-            R.drawable.profile_placeholder, R.drawable.profile_placeholder, R.drawable.profile_placeholder,
-            R.drawable.profile_placeholder, R.drawable.profile_placeholder, R.drawable.profile_placeholder,
-            R.drawable.profile_placeholder, R.drawable.profile_placeholder, R.drawable.profile_placeholder,
-            R.drawable.profile_placeholder, R.drawable.profile_placeholder, R.drawable.profile_placeholder
-        )
+        return List(30) { R.drawable.profile_placeholder }
     }
 }
+
 
 
 
