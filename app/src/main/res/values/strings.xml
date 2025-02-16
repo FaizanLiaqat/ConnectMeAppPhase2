@@ -35,5 +35,9 @@
     <string name="search_screen">Search Screen</string>
     <string name="profile_screen">Profile Screen</string>
     <string name="recent_searches">Recent Searches</string>
+    <string name="search_dms">Search DMs</string>
+    <string name="no_requests_yet">No Requests Yet</string>
+    <string name="search_for_users">Search for users</string>
+    <string name="new_message">New Message</string>
 
 </resources>
