@@ -1,14 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="@android:color/white">
+    android:background="@color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- 🔹 Fixed Top Bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/profile_screen"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
-</FrameLayout>
+        android:background="@color/white"
+        app:elevation="4dp"
+        app:liftOnScroll="false">  <!-- ✅ Prevents shadow when scrolling -->
+
+        <RelativeLayout
+            android:id="@+id/profile_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:padding="10dp"
+            android:background="@color/white">
+
+            <!-- 🔹 "My Profile" Title (Left) -->
+            <TextView
+                android:id="@+id/my_profile_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <!-- ✏️ Edit Profile Icon (Right) -->
+            <ImageView
+                android:id="@+id/edit_profile_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/edit_profile_logo"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 🔹 Scrollable Content (Profile Info & Posts) -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/profile_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <!-- 🔹 Profile Picture -->
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_mask"
+                android:src="@drawable/profile_placeholder"/>
+
+            <!-- 🔹 Username -->
+            <TextView
+                android:id="@+id/profile_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <!-- 🔹 Bio -->
+            <TextView
+                android:id="@+id/profile_bio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌍 Traveler | 📸 Photographer | 📖 Blogger"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"/>
+
+            <!-- 🔹 Stats Section (Posts, Followers, Following) -->
+            <LinearLayout
+                android:id="@+id/stats_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <!-- 🔹 Posts -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/posts_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="58"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Posts"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <!-- 🔹 Followers -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/followers_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.5K"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Followers"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <!-- 🔹 Following -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/following_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="328"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Following"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- 🔹 User's Posts Grid -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/profile_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:clipToPadding="false"
+                android:paddingBottom="80dp"
+                android:scrollbars="none"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -44,5 +44,13 @@
     <string name="view_profile">View Profile</string>
     <string name="typing">Typing...</string>
     <string name="_00_00">00:00</string>
+    <string name="following">Following</string>
+    <string name="_180">180</string>
+    <string name="followers">Followers</string>
+    <string name="_1_2k">1.2K</string>
+    <string name="posts">Posts</string>
+    <string name="_5">5</string>
+    <string name="this_is_my_bio">This is my bio...</string>
+    <string name="my_profile">My Profile</string>
 
 </resources>
