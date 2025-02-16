@@ -89,7 +89,7 @@
             android:layout_height="50dp"
             android:src="@drawable/speaker_on"
             android:background="@drawable/rounded_button_bg"
-            android:padding="9dp"
+            android:padding="10dp"
             android:layout_marginEnd="10dp"/>
 
         <ImageView
