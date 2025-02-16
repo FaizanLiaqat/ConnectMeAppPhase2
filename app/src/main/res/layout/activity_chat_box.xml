@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/primary_background">
 
     <!-- 🔹 Top Layer: Back Button, Username, Video & Call Icons -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:padding="12dp"
-        android:background="@color/white">
+        android:background="@color/secondary_background">
 
         <!-- 🔙 Back Button -->
         <ImageView
@@ -30,7 +30,7 @@
             android:text="@string/username"
             android:layout_marginStart="15dp"
             android:layout_centerVertical="true"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text"
             android:layout_toEndOf="@id/back_icon"
 
             android:textSize="18sp"
@@ -61,6 +61,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/primary_background"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp">
@@ -80,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/view_profile"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text"
             android:textSize="14sp"
             android:background="@drawable/profile_button_bg"
             android:padding="8dp"
@@ -100,7 +101,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:padding="10dp"
-        android:background="@color/white">
+        android:background="@color/primary_background">
 
         <!-- ✏️ Typing Box -->
         <EditText

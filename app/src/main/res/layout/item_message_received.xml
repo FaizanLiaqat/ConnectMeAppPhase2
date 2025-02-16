@@ -26,14 +26,14 @@
             android:id="@+id/text_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text"
             android:textSize="16sp"/>
 
         <TextView
             android:id="@+id/text_timestamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/gray"
+            android:textColor="@color/secondary_text"
             android:textSize="12sp"
             android:layout_gravity="end"/>
     </LinearLayout>

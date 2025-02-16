@@ -15,4 +15,13 @@
     <color name="milkish_white">#F5F5DC</color>  <!-- Slightly darker than white -->
     <color name="slightly_darker_milkish_white">#E8E8D0</color>  <!-- For sent messages -->
 
+    <color name="primary_background">#FFFFFF</color>  <!-- White -->
+    <color name="secondary_background">#F5F5F5</color>  <!-- Light Gray -->
+    <color name="message_input_background">#71713D</color>
+    <!-- Chat Bubble Colors -->
+    <color name="chat_bubble_color">#E7E7CA</color>  <!-- Light Gray for Messages -->
+    <color name="message_input_color">#E7E7CA</color>
+    <!-- Text Colors -->
+    <color name="primary_text">#000000</color>  <!-- Black -->
+    <color name="secondary_text">#666666</color>  <!-- Dark Gray for timestamps -->
 </resources>
