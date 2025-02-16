@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_background">
+
+    <!-- 🔹 Username & Call Time at the Top -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/call_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/call_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp"
+            android:text="@string/_00_00"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <!-- 🔹 Centered Profile Icon -->
+    <ImageView
+        android:id="@+id/call_profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_mask"
+        android:src="@drawable/profile_placeholder"/>
+
+    <!-- 🔹 Bottom Call Controls (Fixed Cutoff Issue) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_bottom_controls"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/more_options"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/three_dots"
+            android:background="@drawable/rounded_button_bg"
+            android:padding="10dp"
+            android:layout_marginEnd="12dp"/>
+
+        <ImageView
+            android:id="@+id/switch_to_video"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/video_call"
+            android:background="@drawable/rounded_button_bg"
+            android:padding="10dp"
+            android:layout_marginEnd="12dp"/>
+
+        <ImageView
+            android:id="@+id/speaker"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/speaker_on"
+            android:background="@drawable/rounded_button_bg"
+            android:padding="10dp"
+            android:layout_marginEnd="12dp"/>
+
+        <ImageView
+            android:id="@+id/microphone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/mic_logo"
+            android:background="@drawable/rounded_button_bg"
+            android:padding="10dp"
+            android:layout_marginEnd="12dp"/>
+
+        <ImageView
+            android:id="@+id/end_call"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/end_call"
+            android:background="@drawable/rounded_red_button_bg"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -43,5 +43,6 @@
     <string name="_12_30_pm">12:30 PM</string>
     <string name="view_profile">View Profile</string>
     <string name="typing">Typing...</string>
+    <string name="_00_00">00:00</string>
 
 </resources>

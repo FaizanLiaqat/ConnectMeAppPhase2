@@ -11,4 +11,7 @@
     <!-- Text Colors -->
     <color name="primary_text">#FFFFFF</color>  <!-- White -->
     <color name="secondary_text">#BDBDBD</color>  <!-- Light Gray for timestamps -->
+
+    <color name="end_call_red">#B71C1C</color>  <!-- Darker Red for Dark Mode -->
+
 </resources>

@@ -1,5 +1,6 @@
 package com.example.connectmeapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
@@ -28,6 +29,28 @@ class ChatBoxActivity : AppCompatActivity() {
         messageInput = findViewById(R.id.message_input)
         sendIcon = findViewById(R.id.send_icon)
 
+        // ✅ Initialize Call Button
+        findViewById<ImageView>(R.id.phone_icon).setOnClickListener {
+            val username = intent.getStringExtra("username") ?: "Unknown"
+            val profileImage = intent.getIntExtra("profileImage", R.drawable.profile_placeholder)
+
+            val intent = Intent(this, PhoneCallActivity::class.java)
+            intent.putExtra("username", username)
+            intent.putExtra("profileImage", profileImage)
+            startActivity(intent)
+        }
+
+        findViewById<ImageView>(R.id.video_call_icon).setOnClickListener {
+            val username = intent.getStringExtra("username") ?: "Unknown"
+            val profileImage = intent.getIntExtra("profileImage", R.drawable.profile_placeholder)
+
+            val intent = Intent(this, VideoCallActivity::class.java).apply {
+                putExtra("username", username)
+                putExtra("profileImage", profileImage)
+            }
+            startActivity(intent)
+        }
+
         // 🔹 Initialize Adapter Before Adding Messages
         chatAdapter = ChatAdapter(messages, currentUserId)
         chatRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -40,6 +63,7 @@ class ChatBoxActivity : AppCompatActivity() {
             sendMessage()
         }
     }
+
 
     // ✅ Function to Add Dummy Messages
     private fun addDummyMessages() {

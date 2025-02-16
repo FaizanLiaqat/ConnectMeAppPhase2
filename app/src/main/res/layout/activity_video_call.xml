@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <!-- 🔹 Username & Call Time -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/call_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/call_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp"
+            android:text="@string/_00_00"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <!-- 🔹 Video Call Placeholder (User's Video Feed) -->
+    <View
+        android:id="@+id/video_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="140dp"
+        android:background="@color/gray"
+        android:layout_centerInParent="true"/>
+
+    <!-- 🔹 Mini Video Preview (Self-View) -->
+    <View
+        android:id="@+id/self_video_preview"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/bottom_call_nav"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_rectangle_bg"/>
+
+    <!-- 🔹 Bottom Call Controls -->
+    <LinearLayout
+        android:id="@+id/bottom_call_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_bottom_controls"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="12dp"
+        android:layout_marginBottom="4dp"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/more_options"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/three_dots"
+            android:background="@drawable/rounded_button_bg"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/switch_to_audio"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/video_call"
+            android:background="@drawable/rounded_button_bg"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/speaker"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/speaker_on"
+            android:background="@drawable/rounded_button_bg"
+            android:padding="9dp"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/microphone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/mic_logo"
+            android:background="@drawable/rounded_button_bg"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/end_call"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/end_call"
+            android:background="@drawable/rounded_red_button_bg"
+            android:padding="10dp"/>
+    </LinearLayout>
+</RelativeLayout>

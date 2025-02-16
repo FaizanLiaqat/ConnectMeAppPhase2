@@ -24,4 +24,9 @@
     <!-- Text Colors -->
     <color name="primary_text">#000000</color>  <!-- Black -->
     <color name="secondary_text">#666666</color>  <!-- Dark Gray for timestamps -->
+    <color name="button_background">#6D5F5F</color>  <!-- Light Gray -->
+    <color name="bottom_call_controls_background">#6D5F5F</color>
+    <color name="end_call_red">#D32F2F</color>  <!-- Bright Red -->
+
+
 </resources>
