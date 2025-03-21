@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- This is a placeholder for the Story tab -->
+    <!-- We're using a FrameLayout as a container since the actual camera preview -->
+    <!-- is controlled by the parent activity -->
+
+    <!-- Additional story-specific controls can be added here if needed -->
+    <!-- For example, stickers, text tools, etc. specific to stories -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Story Mode"
+        android:textColor="@android:color/white"
+        android:background="#80000000"
+        android:padding="8dp"
+        android:visibility="gone" />
+
+</FrameLayout>

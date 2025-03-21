@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
-
+val cameraxVersion = "1.2.1"
 android {
     namespace = "com.example.connectmeapp"
     compileSdk = 35
@@ -40,6 +40,7 @@ android {
 
 dependencies {
     implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -54,5 +55,12 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation (libs.androidx.viewpager2)
     implementation ("com.google.android.material:material:1.10.0")
+
+
+    implementation("androidx.camera:camera-core:$cameraxVersion")
+    implementation("androidx.camera:camera-camera2:$cameraxVersion")
+    implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
+    implementation("androidx.camera:camera-view:$cameraxVersion")
+
 
 }

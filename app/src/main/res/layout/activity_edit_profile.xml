@@ -1,10 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".EditProfileActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleEditProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit Profile"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+    <!-- Profile Image Section -->
+    <FrameLayout
+        android:id="@+id/profileImageContainer"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/profile_placeholder"
+            app:civ_border_color="#EEEEEE"
+            app:civ_border_width="2dp" />
+
+        <ImageView
+            android:id="@+id/cameraIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:src="@drawable/photo_camera"
+            app:tint="@color/black" />
+    </FrameLayout>
+
+    <!-- User's Current Username -->
+    <TextView
+        android:id="@+id/currentUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="12dp"
+        android:text="John Doe"
+        android:textColor="@color/dark_brown"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/profileImageContainer" />
+
+    <!-- Name Field -->
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="24dp"
+        android:text="Name"
+        android:textColor="@color/dark_brown"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/currentUsername" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="John Doe"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/nameLabel" />
+
+    <!-- Username Field -->
+    <TextView
+        android:id="@+id/usernameLabel"
+        android:fontFamily="sans-serif-medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Username"
+        android:textColor="@color/dark_brown"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/nameEditText" />
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="john_doe"
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/usernameLabel" />
+
+    <!-- Contact Number Field -->
+    <TextView
+        android:id="@+id/contactNumberLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Contact Number"
+        android:textColor="@color/dark_brown"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/usernameEditText" />
+
+    <EditText
+        android:id="@+id/contactNumberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="+1 123-456-7890"
+        android:inputType="phone"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/contactNumberLabel" />
+
+    <!-- Bio Field -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/bioLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Bio"
+            android:textColor="@color/dark_brown"
+            android:textSize="20dp"
+             />
+
+        <EditText
+            android:id="@+id/bioEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="🌍 Traveler | 📸 Photographer | 📖 Blogger"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:gravity="start"
+            android:singleLine="false"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

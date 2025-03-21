@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     private val homeFragment = HomeFragment()
     private val searchFragment = SearchFragment()
     private val profileFragment = ProfileFragment()
-    private val contactsFragment = ContactsFragment()
+    private val contactsFragment = ContactFragment()
     private var activeFragment: Fragment = homeFragment // Keeps track of the current active fragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
