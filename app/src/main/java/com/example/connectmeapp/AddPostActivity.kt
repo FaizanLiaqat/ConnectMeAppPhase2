@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+// Define the GalleryAdapter class here
 
 class AddPostActivity : AppCompatActivity() {
     private lateinit var galleryAdapter: GalleryAdapter
