@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "358268363861",
+    "project_id": "faizan1ahmed1smda2",
+    "storage_bucket": "faizan1ahmed1smda2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358268363861:android:af89cf5666596bca0460dc",
+        "android_client_info": {
+          "package_name": "com.example.connectmeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXDQSVVbC8-dk8Ty8WMSIRl2tB9jfmUyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
