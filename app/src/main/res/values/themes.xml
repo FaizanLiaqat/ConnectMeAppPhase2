@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.ConnectMeApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!--  Fix unwanted highlight effect in Bottom Navigation -->
+        <item name="android:colorControlHighlight">@android:color/transparent</item>
+    </style>
+    <style name="Theme.ConnectMeApp.NoActionBar" parent="Theme.ConnectMeApp">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.ConnectMeApp" parent="Base.Theme.ConnectMeApp" />
+</resources>

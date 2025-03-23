@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background Colors -->
+    <color name="primary_background">#121212</color>  <!-- Dark Gray -->
+    <color name="secondary_background">#1E1E1E</color>  <!-- Slightly Lighter Dark Gray -->
+    <color name="message_input_background">#5D4037</color>
+    <!-- Chat Bubble Colors -->
+    <color name="chat_bubble_color">#5D4037</color>  <!-- Dark Brown for Messages -->
+    <color name="message_input_color">#5D4037</color>  <!-- Dark Brown Input Box -->
+
+    <!-- Text Colors -->
+    <color name="primary_text">#FFFFFF</color>  <!-- White -->
+    <color name="secondary_text">#BDBDBD</color>  <!-- Light Gray for timestamps -->
+
+    <color name="end_call_red">#B71C1C</color>  <!-- Darker Red for Dark Mode -->
+
+</resources>

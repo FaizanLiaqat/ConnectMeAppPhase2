@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/comments_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground" />
+
+    <!-- RecyclerView to display the list of comments -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/comments_toolbar"
+        android:layout_above="@id/bottom_comments" />
+
+    <LinearLayout
+        android:id="@+id/bottom_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <!-- User Profile Image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_profile_image"
+            android:layout_width="38dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:src="@drawable/profile_placeholder" />
+
+        <!-- Comment Input Field -->
+        <EditText
+            android:id="@+id/add_comment"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Write a comment..."
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            android:textSize="16sp"/>
+
+        <!-- Post Comment Button -->
+        <Button
+            android:id="@+id/post_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:backgroundTint="@color/dark_brown"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
